@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice: Payment Required</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8d7da;
+            color: #721c24;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            background-color: #ffffff;
+            position: relative;
+        }
+        h1 {
+            color: #d9534f;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .important {
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+        .emoji-container {
+            font-size: 100px;
+            margin-bottom: 20px;
+            animation: float 5s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+        }
+        .language-switch {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .language-switch:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function switchToEnglish() {
+            document.getElementById('bn-content').style.display = 'none';
+            document.getElementById('en-content').style.display = 'block';
+        }
+
+        function switchToBangla() {
+            document.getElementById('en-content').style.display = 'none';
+            document.getElementById('bn-content').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- বাংলা কনটেন্ট -->
+        <div id="bn-content">
+            <h1>নোটিশ: পেমেন্ট প্রয়োজন</h1>
+            <div class="emoji-container">⚠️</div>
+            <p>
+                প্রিয় <strong>আরিফুল</strong>,<br><br>
+                আপনার ওয়েবসাইট ডেভেলপমেন্টের জন্য পেমেন্ট এখনও পাওয়া যায়নি। 
+                আমাদের চুক্তি অনুযায়ী পেমেন্টের শেষ তারিখ <strong>২৮ জানুয়ারি ২০২৫</strong>। 
+                নির্ধারিত সময়ের মধ্যে পেমেন্ট না করলে আপনার ওয়েবসাইটটি স্থায়ীভাবে বন্ধ করে দেওয়া হবে।
+            </p>
+            <p class="important">
+                দয়া করে নিম্নলিখিত নম্বরে পেমেন্ট পাঠান:<br>
+                <strong>বিকাশ/নগদ:</strong> 01945971168
+            </p>
+            <p>
+                ধন্যবাদান্তে,<br>
+                <strong>চিত্রণ ভট্টাচার্য</strong>
+            </p>
+            <button class="language-switch" onclick="switchToEnglish()">Switch to English</button>
+        </div>
+
+        <!-- ইংরেজি কনটেন্ট -->
+        <div id="en-content" style="display: none;">
+            <h1>Notice: Payment Required</h1>
+            <div class="emoji-container">⚠️</div>
+            <p>
+                Dear <strong>Ariful</strong>,<br><br>
+                This is to inform you that the payment for the development of your website has not been received yet. 
+                As per our agreement, the deadline for payment is <strong>28 January 2025</strong>. 
+                Failure to make the payment within this timeframe will result in the permanent suspension of your website.
+            </p>
+            <p class="important">
+                Please send the payment to the following numbers:<br>
+                <strong>Bkash/Nagad:</strong> 01945971168
+            </p>
+            <p>
+                Thank you for your cooperation.<br>
+                <strong>Chitron Bhattacharjee</strong>
+            </p>
+            <button class="language-switch" onclick="switchToBangla()">বাংলায় পরিবর্তন করুন</button>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 চিত্রণ ভট্টাচার্য। সর্বস্বত্ব সংরক্ষিত।
+    </footer>
+</body>
+</html>
